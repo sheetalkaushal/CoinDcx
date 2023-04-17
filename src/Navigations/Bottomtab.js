@@ -8,13 +8,25 @@ import { Home } from "../Screens/Home/Home";
 import Marketing from "../Screens/Marketing/Marketing";
 import Portfolio from "../Screens/Portfolio/Portfolio";
 import Earns from "../Screens/Earns/Earns";
+import Colors from "../Screens/Colors/Colors";
+import { moderateVerticalScale } from "react-native-size-matters";
+import Futures from "../Screens/Futures/Futures";
 const Tab = createBottomTabNavigator();
 export const Bottomtab = () => {
   return (
     <Tab.Navigator
       initRouteName="Home"
       screenOptions={{
-        tabBarActiveTintColor: "#4963d1",
+        tabBarStyle: {
+          backgroundColor: Colors.White,
+          height: moderateVerticalScale(65),
+        },
+        tabBarLabelStyle: {
+          fontSize: 12,
+          marginBottom: 10,
+          fontWeight: "500",
+        },
+        tabBarActiveTintColor: Colors.Dark_purple,
         tabBarInactiveTintColor: "grey",
       }}
     >
@@ -29,7 +41,9 @@ export const Bottomtab = () => {
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#4963d1" : "grey",
+                  marginTop: 10,
+
+                  tintColor: focused ? Colors.Dark_purple : "grey",
                 }}
                 source={ImagePath.ichome}
               />
@@ -48,7 +62,8 @@ export const Bottomtab = () => {
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#4963d1" : "grey",
+                  marginTop: 10,
+                  tintColor: focused ? Colors.Dark_purple : "grey",
                 }}
                 source={ImagePath.icIncrease}
               />
@@ -67,7 +82,8 @@ export const Bottomtab = () => {
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#4963d1" : "grey",
+                  marginTop: 10,
+                  tintColor: focused ? Colors.Dark_purple : "grey",
                 }}
                 source={ImagePath.icEaring}
               />
@@ -75,6 +91,27 @@ export const Bottomtab = () => {
           },
         }}
       />
+      <Tab.Screen
+        name="Futures"
+        component={Futures}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Image
+                style={{
+                  width: 30,
+                  height: 30,
+                  marginTop: 10,
+                  tintColor: focused ? Colors.Dark_purple : "grey",
+                }}
+                source={ImagePath.icassignment}
+              />
+            );
+          },
+        }}
+      />
+      
       <Tab.Screen
         name="Portfolio"
         component={Portfolio}
@@ -86,7 +123,8 @@ export const Bottomtab = () => {
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#4963d1" : "grey",
+                  marginTop: 10,
+                  tintColor: focused ? Colors.Dark_purple : "grey",
                 }}
                 source={ImagePath.icInvestment}
               />

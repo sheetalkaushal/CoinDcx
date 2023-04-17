@@ -6,13 +6,15 @@ import Custombtn from "../../Components/Custombtn";
 import ImagePath from "../../constants/ImagePath";
 import Btnsocial from "../../Components/Btnsocial";
 import strings from "../../constants/strings";
-
+import { namedata } from "../../redux/actions/action";
+import Colors from "../Colors/Colors";
 export const Register = ({ navigation }) => {
   const [FullName, SetFullName] = useState("");
   const [Email, SetEmail] = useState("");
   const [password, SetPassword] = useState("");
   const [enterpass, SetEnterPass] = useState(true);
-  const [Hide, SetHide] = useState("Show");
+  const [Hide, SetHide] = useState(ImagePath.icView);
+
   function gotosetpass() {
     if (!FullName.trim()) {
       alert("Enter your first name");
@@ -20,22 +22,21 @@ export const Register = ({ navigation }) => {
       alert("Enter your Email");
     } else if (!password.trim()) {
       alert("enter password");
-    } else{
+    } 
+    else{
+
     navigation.navigate("OTP")
     }
   }
   function Hidepassword() {
-    if (enterpass == false) {
-      SetEnterPass(true);
-      SetHide("Hide");
-     
-      return;
-    }
     if (enterpass == true) {
       SetEnterPass(false);
-      SetHide("Show");
-  
-      return;
+      SetHide (ImagePath.icHide)
+    }
+     else if (enterpass == false) {
+      SetEnterPass(true);
+      SetHide(ImagePath.icView);
+
     }
   }
   return (
@@ -81,12 +82,15 @@ export const Register = ({ navigation }) => {
         <Text style={Styles.terms}>
      {strings.Agree}
         </Text>
+        <Text style={Styles.termservice}>{strings.Services}</Text>
+        <Text style={Styles.terms}>{strings.and}</Text>
+        <Text style={Styles.policy}>{strings.Policy}</Text>
       </View>
-
       <Custombtn  onPress={gotosetpass}title={strings.Continue} />
-
-      <View>
+      <View style={Styles.orborder}>
+        <View style={Styles.orline}></View>
         <Text style={Styles.or}>{strings.or}</Text>
+        <View style={Styles.orline1}></View>
       </View>
       <Btnsocial
         socialimg={ImagePath.icGoogle}

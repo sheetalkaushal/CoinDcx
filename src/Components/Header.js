@@ -1,17 +1,21 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { Styles } from "./HeaderStyle";
 import ImagePath from "../constants/ImagePath";
-export default Header = () => {
+import { useSelector } from "react-redux";
+export default Header = ({myText,Myimg,notification,txtstyle,headerStyle}) => {
+headerStyle
   return (
-    <View style={Styles.header}>
-      <View style={Styles.Leftcontainer}>
-        <Image style={Styles.profile} source={ImagePath.icProfile} />
-        <Text>Hello Sheetal</Text>
-      </View>
-      <View style={Styles.Rightcontainer}>
-        <Image style={Styles.notification} source={ImagePath.icnotification} />
-      </View>
+   
+    <View style={{...Styles.header,...headerStyle}}>
+      <TouchableOpacity style={Styles.Leftcontainer}>
+        {Myimg ?(<Image style={Styles.profile} source={Myimg} />):null}
+        <Text style={{...Styles.profilename,...txtstyle}}>{myText}</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={Styles.Rightcontainer}>
+        <Image style={Styles.notification} source={notification}/>
+      </TouchableOpacity>
     </View>
+
   );
 };

@@ -1,5 +1,30 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { datasend } from "../redux/actions/action";
+import axios from "axios";
+export const ReqApi=(url,method,header,data)=>{
+  return new Promise((resolve, reject) => {
+    axios({
+      url:url,
+      method:method,
+      header:header,
+      data:data,
+    })
+    .then((response)=>{
+      return resolve(response)
+    })
+    .catch((error)=>{
+      return  reject(error)
+    })
+  })
+}
+// get api
+export const getapi=(url,header={})=>{
+    return ReqApi(url,"GET",header)
+}
+// post api
+export const postApi=(url,data,header={})=>{
+  return ReqApi(url,"POST",data,header={})
+}
 export const GetAsync = async (key) => {
   let userData = await AsyncStorage.getItem(key);
   let allData = await JSON.parse(userData);
@@ -24,3 +49,6 @@ export const AsyncRemoveData = async (key) => {
     console.log("error occured", e);
   }
 };
+
+
+

@@ -5,24 +5,26 @@ import {
     TouchableOpacity,
     StyleSheet,
     Image,
+    
   } from "react-native";
   import React from "react";
   import {
     moderateScale,
     moderateVerticalScale,
   } from "react-native-size-matters";
+import Colors from "../Screens/Colors/Colors";
 
-  export default ({ title, socialimg }) => {
+  export default ({ title, socialimg,textstyle,viewStyle}) => {
     return (
-      <TouchableOpacity style={ Styles.btnsocial}>
+      <TouchableOpacity style={{...Styles.btnsocial,...viewStyle}}>
         <Image source={socialimg}></Image>
-        <Text style={ Styles.textsocial}>{title}</Text>
+        <Text style={{ ...Styles.textsocial, ...textstyle}}>{title}</Text>
       </TouchableOpacity>
     );
   };
   const Styles = StyleSheet.create({
     btnsocial: {
-      backgroundColor:"white",
+      backgroundColor:Colors.White,
       borderRadius: 8,
       height: moderateVerticalScale(48),
       alignItems: "center",
@@ -37,8 +39,10 @@ import {
       fontWeight: "bold",
       letterSpacing: moderateScale(0.88),
       textAlign: "center",
-      color: "black",
+      color:Colors.Black,
       flex: 1,
+    
+    
     },
     socialimg: {
       alignSelf: "center",

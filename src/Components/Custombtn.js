@@ -4,6 +4,7 @@ import {
   moderateScale,
   moderateVerticalScale,
 } from "react-native-size-matters";
+import Colors from "../Screens/Colors/Colors";
 export default ({ title, onPress, style }) => {
   return (
     <View>
@@ -18,7 +19,7 @@ export default ({ title, onPress, style }) => {
 };
 const Styles = StyleSheet.create({
   btntouch: {
-    backgroundColor: "#a4b1e8",
+    backgroundColor: Colors.Purple,
     height: moderateVerticalScale(48),
     alignItems: "center",
     paddingVertical: moderateVerticalScale(14),
@@ -28,6 +29,6 @@ const Styles = StyleSheet.create({
     fontSize: moderateVerticalScale(16),
     fontWeight: "600",
     textAlign: "center",
-    color: "white",
+    color: Colors.White,
   },
 });

@@ -3,15 +3,16 @@ import {
   moderateVerticalScale,
   moderateScale,
 } from "react-native-size-matters";
+import Colors from "../Colors/Colors";
 
 export const Styles = StyleSheet.create({
   main: {
-    backgroundColor: "#2a365c",
+    backgroundColor:Colors.Light_White,
     flex:0.9,
   },
 
   header: {
-    backgroundColor: "#2a365c",
+    backgroundColor:Colors.Light_White,
     paddingTop: 70,
   },
 
@@ -22,18 +23,18 @@ export const Styles = StyleSheet.create({
   },
 
   downbtn: {
-    backgroundColor: "white",
+    backgroundColor:Colors.White,
     padding: 20,
     gap: 20,
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
-    flex:0.5,
+    flex:0.2,
   },
   LoginAccount:{
     borderRadius: 2,
     height: moderateVerticalScale(48),
     alignItems: "center",
-    marginTop:moderateScale(34),
+    marginTop:moderateScale(22),
     paddingVertical: moderateVerticalScale(14),
     borderRadius:8
   },
@@ -41,7 +42,7 @@ export const Styles = StyleSheet.create({
     fontSize: moderateVerticalScale(14),
     fontWeight: "bold",
     textAlign: "center",
-    color: "#4963d1",
+    color:Colors.Dark_purple,
     textDecorationLine: 'underline',
   }
 

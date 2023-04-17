@@ -3,9 +3,10 @@ import {
   moderateScale,
   moderateVerticalScale,
 } from "react-native-size-matters";
+import Colors from "../Colors/Colors";
 export const Styles = StyleSheet.create({
   main: {
-    backgroundColor: "#ffffff",
+    backgroundColor:Colors.White,
     paddingHorizontal: moderateScale(23),
     flex: 1,
   },
@@ -17,7 +18,7 @@ export const Styles = StyleSheet.create({
   },
   otpsms: {
     fontSize: 23,
-    color: "black",
+    color:Colors.Black,
   },
   allotp: {
     flexDirection: "row",
@@ -28,7 +29,7 @@ export const Styles = StyleSheet.create({
     flex: 0.2,
   },
   receive: {
-    color: "#bdbdbd",
+    color:Colors.DARK_GREY,
   },
   wait: {
     marginTop: moderateScale(23),
@@ -37,10 +38,10 @@ export const Styles = StyleSheet.create({
     textAlign: "center",
   },
   paste: {
-    color: "#4963d1",
+    color:Colors.Dark_purple,
     borderRadius: 9,
     borderWidth: 1,
-    borderColor: "#bdbdbd",
+    borderColor:Colors.DARK_GREY,
     height: moderateScale(30),
     width: moderateScale(45),
     textAlignVertical: "center",

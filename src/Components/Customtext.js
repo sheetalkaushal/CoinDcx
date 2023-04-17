@@ -4,21 +4,20 @@ import {
   moderateScale,
   moderateVerticalScale,
 } from "react-native-size-matters";
+import Colors from "../Screens/Colors/Colors";
 export default ({ title, onPress,style}) => {
   return (
     <View>
       <TouchableOpacity onPress={onPress} style={{...Styles.create_account,...style}}>
         <Text style={Styles.account}>{title}</Text>
       </TouchableOpacity>
-     
- 
     </View>
  
   );
 };
 const Styles = StyleSheet.create({
     create_account: {
-     backgroundColor: "#4963d1",
+     backgroundColor:Colors.Dark_purple,
     borderRadius: 2,
     height: moderateVerticalScale(48),
     alignItems: "center",
@@ -29,8 +28,6 @@ const Styles = StyleSheet.create({
         fontSize: moderateVerticalScale(14),
         fontWeight: "bold",
         textAlign: "center",
-        color: "white",
-      }
- 
- 
+        color:Colors.White,
+      },
 });

@@ -8,10 +8,10 @@ import {
   } from "react-native";
   import {
     moderateScale,
-    moderateVerticalScale,
   } from "react-native-size-matters";
   import React from "react";
-  export default ({
+import Colors from "../Screens/Colors/Colors";
+export default ({
     placeholder,
     icon,
     keyboard,
@@ -25,14 +25,14 @@ import {
         <TextInput
           style={Style.settext}
           placeholder={placeholder}
-          placeholderTextColor='#cacaca'
+          placeholderTextColor={Colors.Normal_white}
           keyboardType={keyboard}
           secureTextEntry={hide}
           {...props}
         ></TextInput>
         {SHOW ? (
           <TouchableOpacity onPress={onPress}>
-            <Text style={Style.show}>{SHOW}</Text>
+            <Image style={Style.show} source={SHOW}/>
           </TouchableOpacity>
         ) : null}
       </View>
@@ -48,14 +48,11 @@ import {
       justifyContent: "space-between",
       alignItems: "center",
       borderWidth:2,
-      borderColor:"#f8f8f8",
-    },
-    show: {
-      color:"#e1e1e1",
+      borderColor:Colors.grey_light,
     },
     settext: {
       flex: 1,
-      color:"#e1e1e1",
+      color:Colors.Black,
     },
   });
   
