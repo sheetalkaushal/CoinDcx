@@ -28,6 +28,7 @@ const Marketing = () => {
             fontWeight: "700",
           },
           tabBarActiveTintColor: Colors.Dark_purple,
+          tabBarInactiveTintColor:Colors.DARK_GREY
         }}
       >
         <Tab.Screen

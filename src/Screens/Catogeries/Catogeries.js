@@ -11,6 +11,7 @@ import React from "react";
 import { Style } from "./CatogeriesStyle";
 import ImagePath from "../../constants/ImagePath";
 import { useSelector } from "react-redux";
+import strings from "../../constants/strings";
 const Catogeries = () => {
   const apivalue = useSelector((state) => state.status.apiupdate);
   return (
@@ -18,10 +19,10 @@ const Catogeries = () => {
       <View style={Style.cap}>
         <TouchableOpacity style={Style.categery}>
           <Image style={{ borderRadius: 18 }} source={ImagePath.iclargecap} />
-          <Text style={Style.largeCaps}>Large Caps</Text>
+          <Text style={Style.largeCaps}>{strings.Large_Caps}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={Style.market}>
-          <Text style={Style.tokens}>Top tokens by market Capitalisation</Text>
+          <Text style={Style.tokens}>{strings.Top_tokens}</Text>
           <Image source={ImagePath.icnavigation} />
         </TouchableOpacity>
         <FlatList
@@ -50,15 +51,14 @@ const Catogeries = () => {
         />
         <TouchableOpacity style={Style.categery}>
           <Image style={{ borderRadius: 18 }} source={ImagePath.icmostTrade} />
-          <Text style={Style.largeCaps}>Most Traded</Text>
+          <Text style={Style.largeCaps}>{strings.Most_Traded}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={Style.market}>
-          <Text style={Style.tokens}>
-            Top tokens by volume in the past of 24 hours
-          </Text>
+          <Text style={Style.tokens}>{strings.Top_volume} </Text>
           <Image source={ImagePath.icnavigation} />
         </TouchableOpacity>
         <FlatList
+          showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
           pagingEnabled
           data={apivalue}

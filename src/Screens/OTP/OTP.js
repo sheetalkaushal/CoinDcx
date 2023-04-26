@@ -33,9 +33,14 @@ export const OTP = ({ navigation }) => {
       </View>
       <TouchableOpacity style={Styles.wait}>
         <Text style={Styles.receive}>{strings.WaitOTP}</Text>
-        <Text  onPress={() => {
-          navigation.navigate("");
-        }} style={Styles.paste}>Paste</Text>
+        <Text
+          onPress={() => {
+            navigation.navigate("");
+          }}
+          style={Styles.paste}
+        >
+          {strings.Paste}
+        </Text>
       </TouchableOpacity>
     </View>
   );

@@ -26,6 +26,8 @@ export const Tutorial = ({ navigation }) => {
       </View>
       <FlatList 
       horizontal 
+      scrollEnabled={false}
+      showsVerticalScrollIndicator={false}
       showsHorizontalScrollIndicator={false} 
       pagingEnabled
            data={data}

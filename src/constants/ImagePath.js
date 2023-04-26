@@ -36,5 +36,12 @@ export default {
   icmostTrade: require("../assets/images/mosttraded.jpeg"),
   icassignment: require("../assets/images/assignment.png"),
   icglass: require("../assets/images/glass.jpeg"),
+  iclearning: require("../assets/images/learning.png"),
+  icQuick: require("../assets/images/Quick.jpeg"),
+  icEasy: require("../assets/images/Easy.png"),
+  icLock: require("../assets/images/Lock.png"),
+
+
+  
 };
 

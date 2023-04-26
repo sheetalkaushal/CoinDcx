@@ -26,10 +26,9 @@ export const Style = StyleSheet.create({
     fontSize: 18,
     fontWeight: "500",
   },
-  icon: {
-    paddingHorizontal: moderateScale(30),
-  },
+
   Tabicon: {
     fontSize: 14,
+    textAlign: "center",
   },
 });

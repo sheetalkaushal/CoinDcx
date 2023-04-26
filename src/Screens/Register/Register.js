@@ -14,7 +14,7 @@ export const Register = ({ navigation }) => {
   const [password, SetPassword] = useState("");
   const [enterpass, SetEnterPass] = useState(true);
   const [Hide, SetHide] = useState(ImagePath.icView);
-
+  const [isTextInputFocused, setTextInputFocused] = useState(false);
   function gotosetpass() {
     if (!FullName.trim()) {
       alert("Enter your first name");
@@ -22,21 +22,17 @@ export const Register = ({ navigation }) => {
       alert("Enter your Email");
     } else if (!password.trim()) {
       alert("enter password");
-    } 
-    else{
-
-    navigation.navigate("OTP")
+    } else {
+      navigation.navigate("OTP");
     }
   }
   function Hidepassword() {
     if (enterpass == true) {
       SetEnterPass(false);
-      SetHide (ImagePath.icHide)
-    }
-     else if (enterpass == false) {
+      SetHide(ImagePath.icHide);
+    } else if (enterpass == false) {
       SetEnterPass(true);
       SetHide(ImagePath.icView);
-
     }
   }
   return (
@@ -79,14 +75,12 @@ export const Register = ({ navigation }) => {
         />
       </View>
       <View style={Styles.Services}>
-        <Text style={Styles.terms}>
-     {strings.Agree}
-        </Text>
+        <Text style={Styles.terms}>{strings.Agree}</Text>
         <Text style={Styles.termservice}>{strings.Services}</Text>
         <Text style={Styles.terms}>{strings.and}</Text>
         <Text style={Styles.policy}>{strings.Policy}</Text>
       </View>
-      <Custombtn  onPress={gotosetpass}title={strings.Continue} />
+      <Custombtn onPress={gotosetpass} title={strings.Continue} />
       <View style={Styles.orborder}>
         <View style={Styles.orline}></View>
         <Text style={Styles.or}>{strings.or}</Text>

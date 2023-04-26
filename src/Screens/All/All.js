@@ -8,6 +8,8 @@ const All = () => {
   return (
     <View>
       <FlatList
+      scrollEnabled={false}
+      showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
           pagingEnabled
           data={apivalue}

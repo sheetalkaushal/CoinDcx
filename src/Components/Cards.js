@@ -13,47 +13,54 @@ import { Getdata } from "../redux/actions/apiaction";
 import { COIN_CAT } from "../config/urls";
 import { getdata } from "../redux/actions/action";
 import { useSelector } from "react-redux";
-export const Cards = ({imgSourc,coinName,lowerName,categoryname,price,bgcolor}) => {
-    // const valueget=useSelector((state)=>state.status.apiload)
-    // console.log('vshxg',valueget)
-    // useEffect(() => {
-    //     Getdata(COIN_POST)
-    //       .then((res) => {
-    //         getdata(res);
-            
-    //       })
-    //       .catch((er) => {});
-    //   }, []);
+export const Cards = ({
+  imgSourc,
+  coinName,
+  lowerName,
+  categoryname,
+  price,
+  bgcolor,
+}) => {
+  // const valueget=useSelector((state)=>state.status.apiload)
+  // console.log('vshxg',valueget)
+  // useEffect(() => {
+  //     Getdata(COIN_POST)
+  //       .then((res) => {
+  //         getdata(res);
+
+  //       })
+  //       .catch((er) => {});
+  //   }, []);
   return (
-   <View>
-        <TouchableOpacity
-          style={{ ...Style.coin, ...{ backgroundColor: bgcolor } }}
-        >
-          <View style={Style.allcontent}>
-            <View style={Style.uppertext}>
-              <Image style={Style.imgsymbol} source={imgSourc} />
-              <Text style={Style.uppertxt}>
+    <View>
+      <TouchableOpacity
+        style={{ ...Style.coin, ...{ backgroundColor: bgcolor } }}
+      >
+        <View style={Style.allcontent}>
+          <View style={Style.uppertext}>
+            <Image style={Style.imgsymbol} source={imgSourc} />
+            <Text style={Style.uppertxt}>
               {coinName}
-                {"\n"}
-                <Text style={Style.lowertxt}>{lowerName}</Text>
-              </Text>
-            </View>
-            <View style={Style.catgory}>
-              <Text style={Style.categoryname}>CATEGORY</Text>
-              <Text style={Style.namecategory}>{categoryname}</Text>
-            </View>
-            <View style={Style.pricelist}></View>
-            <View>
-              <Text style={Style.priceitem}>{price}</Text>
-            </View>
-            <View style={Style.listingdivide}>
-              <Text style={Style.listingprice}>Listing price</Text>
-              <View style={Style.imgarrow}>
-                <Image source={ImagePath.icarrowright} />
-              </View>
+              {"\n"}
+              <Text style={Style.lowertxt}>{lowerName}</Text>
+            </Text>
+          </View>
+          <View style={Style.catgory}>
+            <Text style={Style.categoryname}>CATEGORY</Text>
+            <Text style={Style.namecategory}>{categoryname}</Text>
+          </View>
+          <View style={Style.pricelist}></View>
+          <View>
+            <Text style={Style.priceitem}>{price}</Text>
+          </View>
+          <View style={Style.listingdivide}>
+            <Text style={Style.listingprice}>Listing price</Text>
+            <View style={Style.imgarrow}>
+              <Image source={ImagePath.icarrowright} />
             </View>
           </View>
-        </TouchableOpacity>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };

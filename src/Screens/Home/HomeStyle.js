@@ -19,15 +19,15 @@ export const Style = StyleSheet.create({
     width: 350,
     height: 120,
     borderRadius: 8,
-    elevation: 5,
+    elevation: 1,
   },
-  listingPrice:{
-       paddingHorizontal:20,
+  listingPrice: {
+    paddingHorizontal: 20,
   },
-  price:{
-    fontSize:22,
-    color:Colors.Dark_purple,
-    fontWeight:"400"
+  price: {
+    fontSize: 22,
+    color: Colors.Dark_purple,
+    fontWeight: "400",
   },
   symbol: {
     width: 30,
@@ -56,17 +56,6 @@ export const Style = StyleSheet.create({
     fontWeight: "500",
     color: Colors.Light_green,
   },
-  grainers: {
-    marginLeft: moderateScale(18),
-    marginTop: moderateVerticalScale(40),
-    color: Colors.Dark_purple,
-    fontSize: 18,
-    marginBottom: moderateVerticalScale(10),
-  },
-  grain: {
-    borderBottomColor: Colors.grey_light,
-    borderBottomWidth: 1,
-  },
   uppertexts: {
     fontSize: 18,
     fontWeight: "500",
@@ -80,7 +69,7 @@ export const Style = StyleSheet.create({
 
   bitcoins: {
     flexDirection: "row",
-    justifyContent:"space-between",
+    justifyContent: "space-between",
     paddingHorizontal: moderateScale(12),
     alignItems: "center",
     marginBottom: moderateScale(10),
@@ -88,8 +77,22 @@ export const Style = StyleSheet.create({
     borderBottomColor: Colors.grey_light,
     paddingVertical: moderateVerticalScale(15),
   },
-  counting:{
-    marginLeft:90
+  counting: {
+    marginLeft: 90,
   },
-
+  Catogeries: {
+    marginVertical: 23,
+    width: 360,
+    height: 50,
+    marginLeft: 20,
+    justifyContent: "center",
+    backgroundColor: Colors.LIGHT_SKY,
+    borderRadius: 7,
+  },
+  AllCatogeries: {
+    textAlign: "center",
+    fontSize: 16,
+    color: Colors.Dark_purple,
+    fontWeight: "400",
+  },
 });

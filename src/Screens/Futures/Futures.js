@@ -1,12 +1,10 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-
+import { View, Text } from "react-native";
+import React from "react";
 const Futures = () => {
   return (
     <View>
-      <Text>Futures</Text>
+      <Text>hello</Text>
     </View>
-  )
-}
-
-export default Futures
+  );
+};
+export default Futures;
