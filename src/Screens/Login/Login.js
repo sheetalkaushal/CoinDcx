@@ -12,10 +12,12 @@ import auth from '@react-native-firebase/auth';
 import { AsyncSendData } from "../../utilis/utilis";
 import { datasend, namedata } from "../../redux/actions/action";
 export const Login = ({ navigation }) => {
-  // console.log(GoogleSignin,"GoogleSigninGoogleSignin")
+//   console.log(GoogleSignin,"GoogleSigninGoogleSignin")
 // GoogleSignin.configure({
 //   webClientId: '797521806911-aopmfqsa1ras9279fcllpunp0q6uorvh.apps.googleusercontent.com',
+
 // });
+// console.log(webClientId,"hgdyucucf")
 //  const onGoogleButtonPress =async()=> {
 //   // Check if your device supports Google Play
 //   await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "797521806911",
+    "project_id": "signin-c7d14",
+    "storage_bucket": "signin-c7d14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797521806911:android:70f33d8f3e9a28de761a8a",
+        "android_client_info": {
+          "package_name": "com.CoinDcx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797521806911-4jtlo0rhjp3u3n7il8a558869cid3gta.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.CoinDcx",
+            "certificate_hash": "bcadcae94e5516815da3d243598e553d8e79313f"
+          }
+        },
+        {
+          "client_id": "797521806911-acvup6jakkr7vbb9ivn3k78o161vsbln.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.CoinDcx",
+            "certificate_hash": "9585e865f2fcce114538efe55d0042efc9918acc"
+          }
+        },
+        {
+          "client_id": "797521806911-aopmfqsa1ras9279fcllpunp0q6uorvh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyKuOdl0tktqDcA_fXPnVFNTSm4UgZOwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797521806911-aopmfqsa1ras9279fcllpunp0q6uorvh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

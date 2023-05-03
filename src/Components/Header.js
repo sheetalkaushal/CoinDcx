@@ -4,7 +4,6 @@ import { Styles } from "./HeaderStyle";
 import ImagePath from "../constants/ImagePath";
 import { useSelector } from "react-redux";
 export default Header = ({myText,Myimg,notification,txtstyle,headerStyle}) => {
-headerStyle
   return (
    
     <View style={{...Styles.header,...headerStyle}}>
